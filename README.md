@@ -24,8 +24,8 @@ A lightweight, efficient block caching framework implemented in C, designed for 
 
 ```
 .
-├── cache_framework.h    # Header file with public API declarations
-├── cache_framework.c    # Implementation of cache operations
+├── cache.h    # Header file with public API declarations
+├── cache.c    # Implementation of cache operations
 ├── main.c              # Test program and usage examples
 └── README.md           # This file
 ```
@@ -70,10 +70,6 @@ void cache_stats(cache_t* cache, size_t* hits, size_t* misses);
 ### Building
 
 ```bash
-# Using GCC directly
-gcc -o cache_test cache_framework.c main.c
-
-# Or using Makefile (if provided)
 make
 ```
 
@@ -92,7 +88,7 @@ The test program will run a series of tests including:
 ## Usage Example
 
 ```c
-#include "cache_framework.h"
+#include "cache.h"
 
 int main() {
     // Initialize cache
